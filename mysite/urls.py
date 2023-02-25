@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from iris import views
 
+pip3 install -r requirements.txt
+python3 manage.py migrate
+python3 manage.py runserver
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.predict_model, name='predict_model'),
